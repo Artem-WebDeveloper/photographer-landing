@@ -1,5 +1,9 @@
 :root {
-  --color-primary: #90ffda;
+  --color-primary: #222222;
+  --color-hover: #ff3c3c;
+
+  --font-primary: 'Mulish';
+  --font-secondary: 'Oswald';
 }
 
 *,
@@ -16,10 +20,27 @@ html {
 }
 
 body {
+  background-color: #90ffda;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: var(--color-hover);
+  }
 }
 
 .container {
   max-width: 1440px;
   padding: 0 20px;
   margin: 0 auto;
+
+  @media (max-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (max-width: 380px) {
+    max-width: 380px;
+  }
 }
