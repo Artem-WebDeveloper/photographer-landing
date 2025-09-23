@@ -46,8 +46,9 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
-    padding: 25px 0 25px 20px;
+    padding: 23px 0 23px 20px;
     color: #fff;
+    transition: color 0.3s ease;
 
     @media (max-width: 768px) {
       display: block;
