@@ -1,0 +1,99 @@
+.price {
+  &__paragraph {
+    margin-bottom: 40px;
+  }
+}
+
+.cards {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media (max-width: 768px) {
+    gap: 20px;
+  }
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex: 0 0 auto;
+  border: 1px solid var(--color-primary);
+  width: 320px;
+  height: 500px;
+  padding: 24px;
+
+  &__details {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    color: var(--color-primary);
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 8px;
+      left: 0;
+      background-color: var(--color-primary);
+      width: 6px;
+      height: 6px;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 4px;
+    }
+  }
+
+  &__price {
+    font-family: 'Oswald';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: uppercase;
+  }
+
+  &__descrip {
+    margin-top: auto;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 125%;
+    margin-bottom: 12px;
+  }
+
+  &__btn {
+    border: none;
+    width: 100%;
+    color: #fff;
+    background-color: var(--color-primary);
+    font-family: 'Oswald';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: uppercase;
+    padding: 18px 0;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--color-primary);
+      background-color: var(--color-hover);
+    }
+  }
+}

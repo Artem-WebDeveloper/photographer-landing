@@ -2,5 +2,30 @@
   &__container {
     display: flex;
     gap: 40px;
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    max-width: 440px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    flex: 1;
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+
+      &--3 .about__photo {
+        display: none;
+      }
+    }
+  }
+
+  &__photo {
+    display: block;
+    width: 100%;
   }
 }
