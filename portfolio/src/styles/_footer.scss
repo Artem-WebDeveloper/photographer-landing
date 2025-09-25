@@ -1,0 +1,126 @@
+.cta {
+  padding: 38px 0 0 0;
+  color: var(--color-primary);
+
+  @media (max-width: 380px) {
+    padding: 39px 0 0 0;
+  }
+
+  &__text {
+    text-align: center;
+    font-family: 'Oswald';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    text-transform: uppercase;
+  }
+}
+
+.form {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+
+  &__group {
+    @media (max-width: 728px) {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    color: var(--color-primary);
+    padding: 18px 12px;
+    width: 380px;
+    font-family: 'Oswald';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: uppercase;
+    border: 1px solid var(--color-primary);
+    outline: none;
+    transition: all 0.3s ease;
+    &::placeholder {
+      color: #989898;
+    }
+
+    &:focus {
+      border: 1px solid var(--color-hover);
+    }
+
+    @media (max-width: 1024px) {
+      width: 256px;
+    }
+
+    @media (max-width: 728px) {
+      width: 100%;
+    }
+
+    @media (max-width: 380px) {
+      padding: 17px 12px;
+    }
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+    height: 62px;
+    border: none;
+    color: #fff;
+    background-color: var(--color-primary);
+    font-family: 'Oswald';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+
+    &:hover {
+      color: var(--color-primary);
+      background-color: var(--color-hover);
+    }
+
+    @media (max-width: 728px) {
+      margin: 0 auto;
+    }
+
+    @media (max-width: 380px) {
+      width: 100%;
+    }
+  }
+}
+
+.contacts {
+  background-color: var(--color-primary);
+  color: #fff;
+  font-family: 'Oswald';
+  font-size: 16px;
+  font-style: normal;
+  text-transform: uppercase;
+  padding: 20px 0;
+  &__list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    @media (max-width: 615px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  &__item {
+    padding: 18px 20px;
+  }
+}
