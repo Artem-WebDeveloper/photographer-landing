@@ -2,9 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <link rel="icon" href="favicon/favicon-icon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script defer type="module" src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/main.js"></script>
     <title>Portfolio</title>
   </head>
   <body>
@@ -46,6 +56,21 @@
           d="M15 0.25C15.4142 0.25 15.75 0.585786 15.75 1C15.75 1.41421 15.4142 1.75 15 1.75H1C0.585786 1.75 0.25 1.41421 0.25 1C0.25 0.585786 0.585786 0.25 1 0.25H15Z"
           fill="currentColor" />
       </symbol>
+
+      <symbol id="close-modal-icon" viewBox="0 0 24 24" fill="none">
+        <path
+          d="M18 6L6 18"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round" />
+        <path
+          d="M6 6L18 18"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round" />
+      </symbol>
     </svg>
 
     <header class="header">
@@ -81,6 +106,28 @@
               <use href="#menu-icon"></use>
             </svg>
           </button>
+        </div>
+
+        <div class="mob-navigation">
+          <nav class="mob-nav">
+            <ul class="mob-nav__list">
+              <li class="mob-nav__item">
+                <a href="#about" class="mob-nav__link">About Me</a>
+              </li>
+              <li class="mob-nav__item">
+                <a href="#portfolio" class="mob-nav__link">Portfolio</a>
+              </li>
+              <li class="mob-nav__item">
+                <a href="#price" class="mob-nav__link">Price</a>
+              </li>
+              <li class="mob-nav__item">
+                <a href="#faq" class="mob-nav__link">FAQ</a>
+              </li>
+              <li class="mob-nav__item">
+                <a href="#contacts" class="mob-nav__link">Contacts</a>
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
     </header>
@@ -118,12 +165,12 @@
                 </p>
               </div>
 
-              <button class="intro__btn">
+              <a href="#about" class="intro__btn">
                 <span class="intro__btn--text">Scroll down</span>
                 <svg class="intro__btn--arrow-down">
                   <use href="#arrow-down"></use>
                 </svg>
-              </button>
+              </a>
             </div>
 
             <div class="hero__img-box-secondary img-box-secondary">
@@ -537,5 +584,31 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup-book popup-book">
+      <div class="book-box">
+        <svg class="book-box__close-icon">
+          <use href="#close-modal-icon"></use>
+        </svg>
+        <p class="cta__text">Like my portfolio? Sign up for a shoot!</p>
+        <form action="#" class="form">
+          <div class="form__group">
+            <input
+              class="form__input"
+              type="text"
+              placeholder="Your Name"
+              name="name" />
+          </div>
+
+          <div class="form__group">
+            <input class="form__input" type="tel" name="phone" value="+1" />
+          </div>
+
+          <div class="form__group">
+            <button class="form__btn">Book Now</button>
+          </div>
+        </form>
+      </div>
+    </div>
   </body>
 </html>

@@ -1,0 +1,81 @@
+.popup-book {
+  transform: scale(0);
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+  transition: transform 0.3s ease;
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  z-index: 20;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+
+  height: 100%;
+  width: 100%;
+
+  &--open {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: scale(1);
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.book-box {
+  background-color: #fff;
+  padding: 60px;
+  position: relative;
+
+  @media (max-width: 615px) {
+    padding: 60px 20px;
+  }
+
+  &__close-icon {
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    width: 24px;
+    height: 24px;
+    color: var(--color-primary);
+    cursor: pointer;
+
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--color-hover);
+      }
+    }
+  }
+
+  & .form {
+    flex-direction: column;
+    padding: 12px 0 0 0;
+    width: 100%;
+
+    &__group {
+      width: 100%;
+    }
+
+    &__input {
+      @media (max-width: 1024px) {
+        width: 380px;
+      }
+
+      @media (max-width: 728px) {
+        width: 100%;
+      }
+
+      padding: 17px 12px;
+    }
+
+    &__btn {
+      width: 100%;
+    }
+  }
+}

@@ -57,8 +57,10 @@
       text-transform: uppercase;
     }
 
-    &:hover {
-      color: var(--color-hover);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--color-hover);
+      }
     }
   }
   &__icon {

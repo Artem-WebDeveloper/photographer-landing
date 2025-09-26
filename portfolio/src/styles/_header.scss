@@ -2,6 +2,8 @@
   color: #fff;
   background-color: var(--color-primary);
 
+  position: relative;
+
   &__container {
     display: flex;
     justify-content: space-between;
@@ -52,10 +54,16 @@
 
     @media (max-width: 768px) {
       display: block;
+      padding: 23px 0 22px 20px;
+    }
+    @media (max-width: 380px) {
+      padding: 23px 0 20px 20px;
     }
 
-    &:hover {
-      color: var(--color-hover);
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--color-hover);
+      }
     }
   }
 

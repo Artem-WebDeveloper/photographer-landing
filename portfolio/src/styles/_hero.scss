@@ -74,9 +74,6 @@
     display: flex;
     margin-top: auto;
     gap: 9px;
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
     position: relative;
     transition: color 0.3s ease;
 
@@ -90,10 +87,12 @@
     @media (max-width: 728px) {
       display: none;
     }
-    &:hover {
-      color: var(--color-hover);
-    }
 
+    @media (hover: hover) and (pointer: fine) {
+      &:hover {
+        color: var(--color-hover);
+      }
+    }
     &--arrow-down {
       width: 24px;
       height: 24px;
