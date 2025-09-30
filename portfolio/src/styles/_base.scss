@@ -30,6 +30,11 @@ body.lock {
   height: 100%;
 }
 
+html.lock-modal,
+body.lock-modal {
+  overflow: hidden;
+}
+
 a {
   color: inherit;
   text-decoration: none;
