@@ -4,7 +4,9 @@ import './MobileMenu.js';
 import MobileMenu from './MobileMenu.js';
 import Accordion from './Accordion.js';
 import BookForm from './BookForm.js';
+import ScrollButton from './ScrollButton.js';
 
-const mobileMenu = new MobileMenu();
-const accordion = new Accordion();
-const bookForm = new BookForm();
+new MobileMenu();
+new Accordion();
+new BookForm();
+new ScrollButton();
