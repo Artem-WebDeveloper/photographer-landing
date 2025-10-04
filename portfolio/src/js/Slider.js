@@ -18,26 +18,15 @@ class Slider {
     this._isTouch = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
     if (!this._isTouch && window.innerWidth > 768) this._addHoverListeners();
 
-    this._sliderZones.addEventListener('touchstart', e => {
-      this._startX = e.touches[0].clientX;
-      this._touchStartPos = this._position;
-      this._touchDirection = 0;
-    });
+    this._sliderZones.addEventListener(
+      'touchstart',
+      this._onTouchStart.bind(this)
+    );
 
-    this._sliderZones.addEventListener('touchmove', e => {
-      e.preventDefault();
-      const currentX = e.touches[0].clientX;
-      const deltaX = currentX - this._startX;
-
-      this._position = this._touchStartPos + deltaX;
-
-      if (this._position > this._max) this._position = this._max;
-      if (this._position < this._min) this._position = this._min;
-
-      this._sliderTrack.style.transform = `translateX(${this._position}px)`;
-
-      this._touchDirection = deltaX > 0 ? 1 : -1;
-    });
+    this._sliderZones.addEventListener(
+      'touchmove',
+      this._onTouchMove.bind(this)
+    );
 
     this._sliderZones.addEventListener('touchend', this._inertMove.bind(this));
 
@@ -105,7 +94,28 @@ class Slider {
     this._interval = null;
   }
 
+  _onTouchStart(e) {
+    this._startX = e.touches[0].clientX;
+    this._touchStartPos = this._position;
+    this._touchDirection = 0;
+  }
+  _onTouchMove(e) {
+    e.preventDefault();
+    const currentX = e.touches[0].clientX;
+    const deltaX = currentX - this._startX;
+
+    this._position = this._touchStartPos + deltaX;
+
+    if (this._position > this._max) this._position = this._max;
+    if (this._position < this._min) this._position = this._min;
+
+    this._sliderTrack.style.transform = `translateX(${this._position}px)`;
+
+    this._touchDirection = deltaX > 0 ? 1 : -1;
+  }
+
   _inertMove() {
+    if (!this._touchDirection) return;
     let step = 25;
     const friction = 0.9;
 
