@@ -21,20 +21,30 @@
   &__item {
     display: flex;
     flex-direction: column;
-    gap: 19px;
+    // gap: 19px;
     padding: 18px 0 0 0;
 
     &--open .accordion__item-hidden {
-      display: block;
+      // display: block;
+      max-height: 100px;
+
+      @media (max-width: 1350px) {
+        max-height: 145px;
+      }
+
+      @media (max-width: 380px) {
+        max-height: 165px;
+      }
+
+      margin-bottom: 20px;
     }
   }
 
   &__item-hidden {
-    display: none;
-
-    /*  & p {
-      line-height: 154%;
-    } */
+    // display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease;
   }
 
   &__item-line {
@@ -48,6 +58,7 @@
     justify-content: space-between;
     transition: color 0.3s ease;
     cursor: pointer;
+    margin-bottom: 19px;
     & p {
       font-family: 'Oswald';
       font-size: 20px;
@@ -67,5 +78,18 @@
     width: 15.5px;
     height: 15.5px;
     margin-right: 4.25px;
+
+    & use {
+      display: none;
+    }
   }
+}
+
+.accordion__item--open .accordion__icon [name='icon-minus'] {
+  display: block;
+}
+.accordion__item:not(.accordion__item--open)
+  .accordion__icon
+  [name='icon-plus'] {
+  display: block;
 }

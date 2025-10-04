@@ -102,9 +102,7 @@
           </nav>
 
           <button class="nav__btn">
-            <svg class="nav__icon">
-              <use href="#menu-icon"></use>
-            </svg>
+            <span class="nav__icon">&nbsp;</span>
           </button>
         </div>
 
@@ -165,12 +163,12 @@
                 </p>
               </div>
 
-              <a href="#about" class="intro__btn">
+              <button type="button" class="intro__btn">
                 <span class="intro__btn--text">Scroll down</span>
                 <svg class="intro__btn--arrow-down">
                   <use href="#arrow-down"></use>
                 </svg>
-              </a>
+              </button>
             </div>
 
             <div class="hero__img-box-secondary img-box-secondary">
@@ -246,42 +244,47 @@
           </p>
         </div>
         <div class="slider">
+          <div class="slider__zones">
+            <div class="slider__zone slider__zone--left"></div>
+            <div class="slider__zone slider__zone--center"></div>
+            <div class="slider__zone slider__zone--right"></div>
+          </div>
           <div class="slider__track">
             <div class="slider__item">
-              <img src="images/gallery/glr-1.webp" alt="" />
+              <img src="images/gallery/glr-1.webp" alt="Photo 1" />
             </div>
             <div class="slider__item">
-              <img src="images/gallery/glr-2.webp" alt="" />
+              <img src="images/gallery/glr-2.webp" alt="Photo 2" />
             </div>
             <div class="slider__item">
-              <img src="images/gallery/glr-3.webp" alt="" />
+              <img src="images/gallery/glr-3.webp" alt="Photo 3" />
             </div>
             <div class="slider__item">
-              <img src="images/gallery/glr-4.webp" alt="" />
+              <img src="images/gallery/glr-4.webp" alt="Photo 4" />
             </div>
             <div class="slider__item">
-              <img src="images/gallery/glr-5.webp" alt="" />
+              <img src="images/gallery/glr-5.webp" alt="Photo 5" />
             </div>
             <div class="slider__item">
-              <img src="images/gallery/glr-6.webp" alt="" />
+              <img src="images/gallery/glr-6.webp" alt="Photo 6" />
             </div>
             <div class="slider__item">
-              <img src="images/gallery/glr-7.webp" alt="" />
+              <img src="images/gallery/glr-7.webp" alt="Photo 7" />
             </div>
             <div class="slider__item">
-              <img src="images/gallery/glr-8.webp" alt="" />
+              <img src="images/gallery/glr-8.webp" alt="Photo 8" />
             </div>
             <div class="slider__item">
-              <img src="images/gallery/glr-9.webp" alt="" />
+              <img src="images/gallery/glr-9.webp" alt="Photo 9" />
             </div>
             <div class="slider__item">
-              <img src="images/gallery/glr-10.webp" alt="" />
+              <img src="images/gallery/glr-10.webp" alt="Photo 10" />
             </div>
             <div class="slider__item">
-              <img src="images/gallery/glr-11.webp" alt="" />
+              <img src="images/gallery/glr-11.webp" alt="Photo 11" />
             </div>
             <div class="slider__item">
-              <img src="images/gallery/glr-12.webp" alt="" />
+              <img src="images/gallery/glr-12.webp" alt="Photo 12" />
             </div>
           </div>
         </div>
@@ -307,7 +310,7 @@
                 <span class="card__price">€150</span>
               </div>
               <p class="card__descrip">For short sessions and quick results</p>
-              <button class="card__btn">Book Now</button>
+              <button class="card__btn book-btn">Book Now</button>
             </div>
 
             <div class="card card--2">
@@ -327,7 +330,7 @@
               <p class="card__descrip">
                 Perfect for couples, portraits, or lifestyle
               </p>
-              <button class="card__btn">Book Now</button>
+              <button class="card__btn book-btn">Book Now</button>
             </div>
 
             <div class="card card--3">
@@ -348,7 +351,7 @@
               <p class="card__descrip">
                 For when you want to capture everything
               </p>
-              <button class="card__btn">Book Now</button>
+              <button class="card__btn book-btn">Book Now</button>
             </div>
 
             <div class="card card--4">
@@ -367,7 +370,7 @@
                 <span class="card__price">€900</span>
               </div>
               <p class="card__descrip">Full-day or partial wedding coverage</p>
-              <button class="card__btn">Book Now</button>
+              <button class="card__btn book-btn">Book Now</button>
             </div>
           </div>
         </div>
@@ -382,11 +385,12 @@
               </p>
             </div>
             <div class="accordion">
-              <div class="accordion__item accordion__item--open">
+              <div class="accordion__item">
                 <div class="accordion__heading">
                   <p>How do I book a shoot?</p>
                   <svg class="accordion__icon">
-                    <use href="#minus-icon"></use>
+                    <use href="#plus-icon" name="icon-plus"></use>
+                    <use href="#minus-icon" name="icon-minus"></use>
                   </svg>
                 </div>
                 <div class="accordion__item-hidden">
@@ -405,7 +409,8 @@
                 <div class="accordion__heading">
                   <p>Can I choose the location myself?</p>
                   <svg class="accordion__icon">
-                    <use href="#plus-icon"></use>
+                    <use href="#plus-icon" name="icon-plus"></use>
+                    <use href="#minus-icon" name="icon-minus"></use>
                   </svg>
                 </div>
                 <div class="accordion__item-hidden">
@@ -423,7 +428,8 @@
                 <div class="accordion__heading">
                   <p>How long does the shoot take?</p>
                   <svg class="accordion__icon">
-                    <use href="#plus-icon"></use>
+                    <use href="#plus-icon" name="icon-plus"></use>
+                    <use href="#minus-icon" name="icon-minus"></use>
                   </svg>
                 </div>
                 <div class="accordion__item-hidden">
@@ -441,7 +447,8 @@
                 <div class="accordion__heading">
                   <p>When will I receive the photos?</p>
                   <svg class="accordion__icon">
-                    <use href="#plus-icon"></use>
+                    <use href="#plus-icon" name="icon-plus"></use>
+                    <use href="#minus-icon" name="icon-minus"></use>
                   </svg>
                 </div>
                 <div class="accordion__item-hidden">
@@ -459,7 +466,8 @@
                 <div class="accordion__heading">
                   <p>Will you help me pose?</p>
                   <svg class="accordion__icon">
-                    <use href="#plus-icon"></use>
+                    <use href="#plus-icon" name="icon-plus"></use>
+                    <use href="#minus-icon" name="icon-minus"></use>
                   </svg>
                 </div>
                 <div class="accordion__item-hidden">
@@ -478,7 +486,8 @@
                 <div class="accordion__heading">
                   <p>What should I wear?</p>
                   <svg class="accordion__icon">
-                    <use href="#plus-icon"></use>
+                    <use href="#plus-icon" name="icon-plus"></use>
+                    <use href="#minus-icon" name="icon-minus"></use>
                   </svg>
                 </div>
                 <div class="accordion__item-hidden">
@@ -497,7 +506,8 @@
                 <div class="accordion__heading">
                   <p>Do you retouch the photos?</p>
                   <svg class="accordion__icon">
-                    <use href="#plus-icon"></use>
+                    <use href="#plus-icon" name="icon-plus"></use>
+                    <use href="#minus-icon" name="icon-minus"></use>
                   </svg>
                 </div>
                 <div class="accordion__item-hidden">
@@ -515,7 +525,8 @@
                 <div class="accordion__heading">
                   <p>Can I get the raw files?</p>
                   <svg class="accordion__icon">
-                    <use href="#plus-icon"></use>
+                    <use href="#plus-icon" name="icon-plus"></use>
+                    <use href="#minus-icon" name="icon-minus"></use>
                   </svg>
                 </div>
                 <div class="accordion__item-hidden">
@@ -552,7 +563,7 @@
               </div>
 
               <div class="form__group">
-                <button class="form__btn">Book Now</button>
+                <button class="form__btn book-btn">Book Now</button>
               </div>
             </form>
           </div>
@@ -587,25 +598,33 @@
 
     <div class="popup-book">
       <div class="book-box">
-        <svg class="book-box__close-icon">
-          <use href="#close-modal-icon"></use>
-        </svg>
+        <button class="close-btn">
+          <svg class="close-btn__icon">
+            <use href="#close-modal-icon"></use>
+          </svg>
+        </button>
         <p class="cta__text">Like my portfolio? Sign up for a shoot!</p>
         <form action="#" class="form">
           <div class="form__group">
             <input
               class="form__input"
               type="text"
+              required
               placeholder="Your Name"
               name="name" />
           </div>
 
           <div class="form__group">
-            <input class="form__input" type="tel" name="phone" value="+1" />
+            <input
+              required
+              class="form__input"
+              type="tel"
+              name="phone"
+              value="+1" />
           </div>
 
           <div class="form__group">
-            <button class="form__btn">Book Now</button>
+            <button class="form__btn-submit">Book Now</button>
           </div>
         </form>
       </div>
