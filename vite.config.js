@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/artem-webdeveloper-JSFE2025Q3/portfolio/',
+  base: '/photographer-landing/',
   build: {
     sourcemap: true,
   },
